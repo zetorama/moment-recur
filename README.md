@@ -179,6 +179,8 @@ Calendar Intervals do not depend on a start date. They define a unit of another 
 
 Possible Calendar Intervals Include:
 * dayOfWeek / daysOfWeek
+    - weekOfMonthByDay / weeksOfMonthByDay
+    - wholeMonth / wholeMonths
 * dayOfMonth / daysOfMonth
 * weekOfMonth / weeksOfMonth
 * weekOfYear / weeksOfYear
