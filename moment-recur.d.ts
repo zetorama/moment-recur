@@ -511,7 +511,7 @@ declare namespace moment {
     export var defaultFormat: string;
 }
 
-/************ EXTEND ************/
+// Extend
 declare namespace moment {
     interface Moment {
         recur(): Recurrence;
@@ -526,7 +526,4 @@ declare namespace moment {
     }
 }
 
-declare module "moment-recur" {
-
-    export = moment;
-}
+export = moment;
