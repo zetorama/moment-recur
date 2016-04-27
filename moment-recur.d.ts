@@ -520,9 +520,52 @@ declare namespace moment {
 
     interface Recurrence {
         every(duration: string | number | string[] | number[], interval?: string): Recurrence;
-        matches(date: any): boolean;
+        matches(date: any, ignoreStartEnd?: boolean): boolean;
         next(howMany: number): Moment[];
+        next(howMany: number, format: string): string;
         previous(howMany: number): Moment[];
+        previous(howMany: number, format: string): string;
+        all(): Moment[];
+        all(format: string): string[];
+
+        except(date: any): Recurrence;
+        forget(dateOrRule: any): Recurrence;
+        repeats(): boolean;
+        hasRule(measure: string): boolean;
+        validateRule(ruleType: string): void;
+
+        startDate(date: any): Recurrence;
+        startDate(): Moment;
+        endDate(date: any): Recurrence;
+        endDate(): Moment;
+        fromDate(date: any): Recurrence;
+        fromDate(): Moment;
+
+        save(): any;
+
+        // measures
+        days(duration?: string | number | string[] | number[]): Recurrence;
+        day(duration?: string | number | string[] | number[]): Recurrence;
+        weeks(duration?: string | number | string[] | number[]): Recurrence;
+        week(duration?: string | number | string[] | number[]): Recurrence;
+        months(duration?: string | number | string[] | number[]): Recurrence;
+        month(duration?: string | number | string[] | number[]): Recurrence;
+        wholeMonths(duration?: string | number | string[] | number[]): Recurrence;
+        wholeMonth(duration?: string | number | string[] | number[]): Recurrence;
+        years(duration?: string | number | string[] | number[]): Recurrence;
+        year(duration?: string | number | string[] | number[]): Recurrence;
+        daysOfWeek(duration?: string | number | string[] | number[]): Recurrence;
+        dayOfWeek(duration?: string | number | string[] | number[]): Recurrence;
+        daysOfMonth(duration?: string | number | string[] | number[]): Recurrence;
+        dayOfMonth(duration?: string | number | string[] | number[]): Recurrence;
+        weeksOfMonth(duration?: string | number | string[] | number[]): Recurrence;
+        weekOfMonth(duration?: string | number | string[] | number[]): Recurrence;
+        weeksOfMonthByDay(duration?: string | number | string[] | number[]): Recurrence;
+        weekOfMonthByDay(duration?: string | number | string[] | number[]): Recurrence;
+        weeksOfYear(duration?: string | number | string[] | number[]): Recurrence;
+        weekOfYear(duration?: string | number | string[] | number[]): Recurrence;
+        monthsOfYear(duration?: string | number | string[] | number[]): Recurrence;
+        monthOfYear(duration?: string | number | string[] | number[]): Recurrence;
     }
 }
 
